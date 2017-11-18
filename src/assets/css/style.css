@@ -1,0 +1,59 @@
+/* General */
+
+/* Header */
+header{position: fixed; width: 100%; box-shadow: 0px 3px 5px rgba(0,0,0,.2); z-index: 100;}
+.nav-desktop .nav-first-desktop{text-align: left; height: 50px; background: linear-gradient(to top, #444, #666); padding-left: 0;}
+.nav-desktop .nav-first-desktop div{height: 50px; display: flex; flex-flow: row nowrap; align-items: center;}
+.nav-desktop .nav-first-desktop div .btn-project-header{cursor: pointer; text-decoration: none; font-size: 16px; color: #fff; border-right: 1px solid #c2c2c2; background: transparent; padding: 0 20px 0 0;}
+.nav-desktop .nav-first-desktop div .btn-new-task{cursor: pointer; margin-top: 3px; margin-right: 10px; display: flex; flex-flow: row no wrap; font-weight: lighter; align-items: center; font-size: 16px; color: #fff; margin-left: 6px; text-shadow: 0px 1px 4px rgba(0,0,0,.2); text-decoration: none; transition: 300ms ease all;}
+.nav-desktop .nav-first-desktop div .btn-new-task .nav-plus{margin-bottom: 3px; font-size: 40px; margin-right: 6px; margin-left: 10px; font-weight: bold;}
+.nav-desktop .nav-first-desktop div .btn-new-task:hover{letter-spacing: 1px;}
+
+.nav-desktop .nav-second-desktop{text-align: center; height: 50px; background: linear-gradient(to top, #444, #666); display: flex; align-items: center; justify-content: center;}
+.nav-desktop .nav-second-desktop a{text-decoration: none; color: #fff; font-size: 20px; cursor: pointer; font-weight: bold; text-shadow: 0px 1px 4px rgba(0,0,0,.2); letter-spacing: 1px;}
+
+.nav-desktop .nav-third-desktop{text-align: right; height: 50px; background: linear-gradient(to top, #444, #666);}
+.nav-desktop .nav-third-desktop div{float: right; width: 40px; margin-top: 5px; height: 40px; border: 1px solid #777; border-radius: 50%; background: #999; box-shadow: 1px 1px 4px rgba(0,0,0,.1);}
+.nav-desktop .nav-third-desktop div .nav-avatar img{width: 100%;}
+
+/* Project Header */
+.container-project-header{margin-left: 20px;}
+
+/* List Tasks */
+.container-list-task{padding: 0; margin-top: 50px;}
+.container-list-task .container-title-list-task{position: fixed; width: 100%; background: #c2c2c2; padding: 10px 20px; display: flex; flex-flow: row nowrap; justify-items: c
+;}
+.container-list-task .container-title-list-task i{text-shadow: 0px 1px 4px rgba(0,0,0,.2);}
+.container-list-task .container-title-list-task .i-todo{font-size: 16px; color: #fff;}
+.container-list-task .container-title-list-task .i-inprogress{font-size: 16px; color: #fff;}
+.container-list-task .container-title-list-task .i-finished{font-size: 16px; color: #fff;}
+.container-list-task .container-title-list-task h4{margin: 0 0 0 6px; color: #fff; cursor: default; font-size: 16px; text-shadow: 0px 1px 4px rgba(0,0,0,.2); font-weight: lighter; letter-spacing: 1px;}
+.container-list-task .container-tasks-list-task{border: 1px solid transparent; margin-top: 36px;}
+.container-list-task .container-tasks-list-task ul{list-style: none; padding: 0 10px;}
+
+/* Cards tasks */
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo{padding: 10px; background: #f5a323; border-radius: 6px; margin: 10px 0; box-shadow: 1px 2px 4px rgba(0,0,0,.1); transition: 300ms ease all; display: inline-block;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo:hover, .card-task-list-inprogress:hover, .card-task-list-finished:hover{transform: scale(1.01); box-shadow: 2px 4px 7px rgba(0,0,0,.2);}
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo h3{margin: 0; color: #fff; font-size: 18px; margin-bottom: 4px; cursor: default; text-shadow: 0px 1px 2px rgba(0,0,0,.2);}
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo p{color: #fff; font-size: 13px; margin-top: 10px; cursor: default;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo .btn-do-task{text-decoration: none; transition: 300ms ease all; cursor: pointer; color: #f5a323; text-shadow: 0px 1px 4px rgba(0,0,0,.1); box-shadow: 1px 2px 4px rgba(0,0,0,.2); padding: 2px 6px; font-weight: bold; text-transform: capitalize; background: #fff; border-radius: 20px;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-todo .btn-edit-task{color: #fff; cursor: pointer; transition: 300ms ease all; background: transparent; text-decoration: none; padding: 2px 6px; font-weight: bold; text-transform: capitalize;}
+
+.container-list-task .container-tasks-list-task ul li .card-task-list-inprogress{transition: 300ms ease all; padding: 10px; background: rgb(80, 153, 243); border-radius: 6px; margin: 10px 0; box-shadow: 1px 2px 4px rgba(0,0,0,.2); display: inline-block;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-inprogress h3{margin: 0; color: #fff; font-size: 18px; margin-bottom: 4px; cursor: default; text-shadow: 0px 1px 2px rgba(0,0,0,.2);}
+.container-list-task .container-tasks-list-task ul li .card-task-list-inprogress p{color: #fff; font-size: 13px; margin-top: 10px; cursor: default;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-inprogress a{text-decoration: none; transition: 300ms ease all; cursor: pointer; color: rgb(80, 153, 243);; text-shadow: 0px 1px 4px rgba(0,0,0,.1); box-shadow: 1px 2px 4px rgba(0,0,0,.2); padding: 2px 6px; font-weight: bold; letter-spacing: 0px; text-transform: capitalize; background: #fff; border-radius: 20px;}
+
+.container-list-task .container-tasks-list-task ul li .card-task-list-finished{transition: 300ms ease all; padding: 10px; background: rgb(88, 133, 70); border-radius: 6px; margin: 10px 0; box-shadow: 1px 2px 4px rgba(0,0,0,.2); display: inline-block;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-finished h3{margin: 0; color: #fff; font-size: 18px; margin-bottom: 4px; cursor: default; text-shadow: 0px 1px 2px rgba(0,0,0,.2);}
+.container-list-task .container-tasks-list-task ul li .card-task-list-finished p{color: #fff; font-size: 13px; margin-top: 10px; cursor: default;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-finished a{text-decoration: none; transition: 300ms ease all; cursor: pointer; color: rgb(80, 153, 243);; text-shadow: 0px 1px 4px rgba(0,0,0,.2); box-shadow: 1px 2px 4px rgba(0,0,0,.2); padding: 2px 6px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; background: #fff; border-radius: 20px;}
+.container-list-task .container-tasks-list-task ul li .card-task-list-finished a:hover{letter-spacing: 2px;}
+
+/* Edit Task */
+.container-edit-task{margin-top: 10%;}
+.container-edit-task .card-task-edit-todo{padding: 10px; background: #f5a323; border-radius: 6px; margin: 10px 0; box-shadow: 1px 2px 4px rgba(0,0,0,.1); transition: 300ms ease all;}
+.container-edit-task .card-task-edit-todo:hover{transform: scale(1.01); box-shadow: 2px 4px 7px rgba(0,0,0,.2);}
+.container-edit-task .card-task-edit-todo label{color: #fff; text-shadow: 0px 1px 2px rgba(0,0,0,.1);}
+.container-edit-task .card-task-edit-todo .btn-edit-task{text-decoration: none; transition: 300ms ease all; cursor: pointer; color: #f5a323; text-shadow: 0px 1px 4px rgba(0,0,0,.1); box-shadow: 1px 2px 4px rgba(0,0,0,.2); padding: 2px 10px; font-weight: bold; text-transform: capitalize; background: #fff; border-radius: 20px;}
+.container-edit-task .card-task-edit-todo .btn-cancel-edit-task{color: #fff; cursor: pointer; transition: 300ms ease all; background: transparent; text-decoration: none; padding: 2px 6px; font-weight: bold; text-transform: capitalize;}

@@ -1,0 +1,18 @@
+<div class="col-md-4 col-md-offset-4 container-edit-task">
+    <h3>{{title}}</h3>
+    <div class="card-task-edit-todo">
+        <form>
+            <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" [(ngModel)]="task.name" [ngModelOptions]="{standalone: true}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea [(ngModel)]="task.comment" [ngModelOptions]="{standalone: true}" class="form-control" rows="5"></textarea>
+            </div>
+        </form>
+
+        <a type="submit" class="btn-edit-task" (click)="updateTask()">{{title}}</a>
+        <a [routerLink]="['/home']" class="btn-cancel-edit-task">Cancel</a>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="col-md-4 container-list-task">
+    <div class="container-title-list-task">
+        <i class="fa fa-clock-o i-todo"></i>
+        <h4>To Do</h4>
+    </div>
+    
+    <div class="container-tasks-list-task">
+        <ul>
+            <li *ngFor="let p of projectsList | async">{{p}}</li>
+            <li *ngFor="let t of tasks">
+                <div *ngIf="t.state == 'todo'" class="card-task-list-todo">
+                    <h3>{{ t.name }}</h3>
+                    <p>{{ t.comment }}</p>
+                    <div>
+                        <a (click)="changeToInProgress(t)" class="btn-do-task">Do!</a>
+                        <a [routerLink]="['/edit-task', t.id]" class="btn-edit-task">Edit</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="col-md-4 container-list-task">
+    <div class="container-title-list-task">
+        <i class="fa fa-paint-brush i-todo"></i>
+        <h4>In Progress</h4>
+    </div>
+
+    <div class="container-tasks-list-task">
+        <ul>
+            <li *ngFor="let t of tasks">
+                <div *ngIf="t.state == 'inprogress'" class="card-task-list-inprogress">
+                    <h3>{{ t.name }}</h3>
+                    <p>{{ t.comment }}</p>
+                    <a (click)="changeToFinished(t)">Ready!</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-md-4 container-list-task">
+    <div class="container-title-list-task">
+        <i class="fa fa-check i-todo"></i>
+        <h4>Finished</h4>
+    </div>
+
+    <div class="container-tasks-list-task">
+        <ul>
+            <li *ngFor="let t of tasks">
+                <div *ngIf="t.state == 'finished'" class="card-task-list-finished">
+                    <h3>{{ t.name }}</h3>
+                    <p>{{ t.comment }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--<div id="modalEditTask" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="margin-top: 10%;">
+
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Edit Task</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="title">Name</label>
+                    <input type="text" [(ngModel)]="task.name" [ngModelOptions]="{standalone: true}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea [(ngModel)]="task.comment" [ngModelOptions]="{standalone: true}" class="form-control" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-default" (click)="updateTask(task)">Edit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+
+    </div>
+</div>-->
